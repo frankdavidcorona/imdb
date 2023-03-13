@@ -1,5 +1,6 @@
 import { HomeIcon, InformationCircleIcon } from "@heroicons/react/24/solid";
 import Link from "next/link";
+import DarkModeSwitch from "./DarkModeSwitch";
 import MenuItem from "./MenuItem";
 
 export default function Header() {
@@ -13,13 +14,14 @@ export default function Header() {
           icon={InformationCircleIcon}
         />
       </div>
-      <div className="">
-        <Link href={"/"}>
+      <div className="flex items-center space-x-5">
+        <DarkModeSwitch />
+        <Link href={"/"} className="mb-2">
           <h2 className="text-2xl">
-            <span className="text-sm text-slate-700 font-bold bg-amber-500 py-1 px-2 rounded-lg mr-1">
+            <span className="text-sm text-slate-700 font-bold bg-amber-500 py-1 px-2 rounded-lg mr-3">
               IMDb
             </span>
-            <span className="text-sm text-slate-700 font-bold hidden sm:inline uppercase hover:underline decoration-amber-500">
+            <span className="text-sm text-slate-700 dark:text-gray-200 font-bold hidden sm:inline uppercase hover:underline decoration-amber-500">
               Clone
             </span>
           </h2>
